@@ -64,6 +64,31 @@ class SimpleCalculatorActivity : AppCompatActivity() {
         subtractButton = findViewById(R.id.calculator_subtract_button)
         multiplyButton = findViewById(R.id.calculator_multiply_button)
         divideButton = findViewById(R.id.calculator_divide_button)
+
+        savedInstanceState?.getCharSequence("first")?.let { first.append(it) }
+        savedInstanceState?.getCharSequence("second")?.let { second.append(it) }
+        savedInstanceState?.getSerializable("displayMode", DisplayMode::class.java)?.let { displayMode = it }
+        savedInstanceState?.getSerializable("operationIntent", OperationMode::class.java)?.let { operationIntent = it }
+        savedInstanceState?.getSerializable("operationLocked", OperationMode::class.java)?.let { operationLocked = it }
+        savedInstanceState?.getBoolean("manipulated")?.let { manipulated = it }
+        savedInstanceState?.getBoolean("calculated")?.let { calculated = it }
+        savedInstanceState?.getBoolean("block")?.let { block = it }
+        savedInstanceState?.getBoolean("error")?.let { error = it }
+
+        drawUI()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putCharSequence("first", first)
+        outState.putCharSequence("second", second)
+        outState.putSerializable("displayMode", displayMode)
+        outState.putSerializable("operationIntent", operationIntent)
+        outState.putSerializable("operationLocked", operationLocked)
+        outState.putBoolean("manipulated", manipulated)
+        outState.putBoolean("calculated", calculated)
+        outState.putBoolean("block", block)
+        outState.putBoolean("error", error)
     }
 
     private fun bindListeners() {
