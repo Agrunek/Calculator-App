@@ -183,7 +183,7 @@ class SimpleCalculatorActivity : AppCompatActivity() {
         } else {
             currentNumber().clear()
 
-            operationIntent = if (operationIntent == OperationMode.NONE) {
+            operationIntent = if (operationIntent == OperationMode.NONE && !block) {
                 operationLocked
             } else {
                 OperationMode.NONE
