@@ -44,7 +44,8 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun calculatorAdvancedStartButtonOnClick() {
-        Toast.makeText(this, "In development...", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, AdvancedCalculatorActivity::class.java)
+        startActivity(intent)
     }
 
     private fun aboutStartButtonOnClick() {

@@ -9,4 +9,8 @@ object Enums {
     enum class OperationMode {
         NONE, ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION
     }
+
+    enum class ExpandedOperationMode {
+        NONE, ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION, POWER
+    }
 }

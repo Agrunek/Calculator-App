@@ -32,4 +32,13 @@
     <string name="calculator_7_button_title">7</string>
     <string name="calculator_8_button_title">8</string>
     <string name="calculator_9_button_title">9</string>
+
+    <string name="calculator_sine_button_title">sin</string>
+    <string name="calculator_cosine_button_title">cos</string>
+    <string name="calculator_tangent_button_title">tan</string>
+    <string name="calculator_natural_logarithm_button_title">ln</string>
+    <string name="calculator_logarithm_button_title">log</string>
+    <string name="calculator_square_root_button_title">√x</string>
+    <string name="calculator_square_button_title">x²</string>
+    <string name="calculator_power_button_title">xʸ</string>
 </resources>
