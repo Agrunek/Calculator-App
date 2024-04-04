@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="author_name">by Adrian Antczak</string>
+    <string name="app_description">This app took longer to make than I am willing to admit…</string>
 
     <string name="menu_calculator_simple_start_button_title">Simple</string>
     <string name="menu_calculator_advanced_start_button_title">Advanced</string>
