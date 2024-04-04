@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/menu_app_name_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:autoSizeMaxTextSize="9001sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/menu_calculator_simple_start_button"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="320dp" />
+
+    <Button
+        android:id="@+id/menu_calculator_simple_start_button"
+        style="@style/Theme.Calculator.Button.Orange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/menu_calculator_simple_start_button_title"
+        app:layout_constraintBottom_toTopOf="@id/menu_calculator_advanced_start_button"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_app_name_text"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="320dp" />
+
+    <Button
+        android:id="@+id/menu_calculator_advanced_start_button"
+        style="@style/Theme.Calculator.Button.Orange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/menu_calculator_advanced_start_button_title"
+        app:layout_constraintBottom_toTopOf="@id/menu_about_start_button"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_calculator_simple_start_button"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="320dp" />
+
+    <Button
+        android:id="@+id/menu_about_start_button"
+        style="@style/Theme.Calculator.Button.Orange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/menu_about_start_button_title"
+        app:layout_constraintBottom_toTopOf="@id/menu_exit_button"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_calculator_advanced_start_button"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="320dp" />
+
+    <Button
+        android:id="@+id/menu_exit_button"
+        style="@style/Theme.Calculator.Button.Orange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:text="@string/menu_exit_button_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_about_start_button"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="320dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Calculator</string>
+
+    <string name="menu_calculator_simple_start_button_title">Simple</string>
+    <string name="menu_calculator_advanced_start_button_title">Advanced</string>
+    <string name="menu_about_start_button_title">About</string>
+    <string name="menu_exit_button_title">Exit</string>
+
+    <string name="calculator_default_value">0</string>
+    <string name="calculator_error_message">Error</string>
+
+    <string name="calculator_clear_button_title_all">AC</string>
+    <string name="calculator_clear_button_title_enter">C</string>
+
+    <string name="calculator_sign_flip_button_title">+/-</string>
+    <string name="calculator_percent_button_title">%</string>
+    <string name="calculator_point_button_title">,</string>
+
+    <string name="calculator_add_button_title">+</string>
+    <string name="calculator_subtract_button_title">-</string>
+    <string name="calculator_multiply_button_title">×</string>
+    <string name="calculator_divide_button_title">÷</string>
+    <string name="calculator_equals_button_title">=</string>
+
+    <string name="calculator_0_button_title">0</string>
+    <string name="calculator_1_button_title">1</string>
+    <string name="calculator_2_button_title">2</string>
+    <string name="calculator_3_button_title">3</string>
+    <string name="calculator_4_button_title">4</string>
+    <string name="calculator_5_button_title">5</string>
+    <string name="calculator_6_button_title">6</string>
+    <string name="calculator_7_button_title">7</string>
+    <string name="calculator_8_button_title">8</string>
+    <string name="calculator_9_button_title">9</string>
+</resources>

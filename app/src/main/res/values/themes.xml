@@ -1,0 +1,38 @@
+<resources>
+
+    <style name="Base.Theme.Calculator" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
+
+
+    <style name="Base.Theme.Calculator.Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/button_base_background</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:scaleX">.8</item>
+        <item name="android:scaleY">.8</item>
+    </style>
+
+    <style name="Theme.Calculator.Button.LightGray" parent="Base.Theme.Calculator.Button">
+        <item name="android:backgroundTint">@color/light_gray</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Calculator.Button.Gray" parent="Base.Theme.Calculator.Button">
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.Calculator.Button.DarkGray" parent="Base.Theme.Calculator.Button">
+        <item name="android:backgroundTint">@color/dark_gray</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.Calculator.Button.Orange" parent="Base.Theme.Calculator.Button">
+        <item name="android:backgroundTint">@color/orange_button_background_tint</item>
+        <item name="android:textColor">@color/orange_button_text_color</item>
+    </style>
+
+</resources>
