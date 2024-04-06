@@ -6,11 +6,11 @@ object Enums {
         FIRST, SECOND
     }
 
-    enum class OperationMode {
-        NONE, ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION
+    enum class UnaryOperation {
+        SIGN_FLIP, PERCENT, SINE, COSINE, TANGENT, NATURAL_LOGARITHM, LOGARITHM, SQUARE_ROOT, SQUARE
     }
 
-    enum class ExpandedOperationMode {
+    enum class BinaryOperation {
         NONE, ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION, POWER
     }
 }
