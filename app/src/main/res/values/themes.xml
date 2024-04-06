@@ -9,7 +9,6 @@
 
     <style name="Base.Theme.Calculator.Button" parent="android:Widget.Button">
         <item name="android:background">@drawable/button_base_background</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:scaleX">.8</item>
         <item name="android:scaleY">.8</item>
