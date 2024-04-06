@@ -20,6 +20,15 @@ import com.app.calculator.Enums.OperationMode
 import com.app.calculator.Constants.MAX_DISPLAY_SIZE
 import com.app.calculator.Constants.SN_LOWER_BOUND
 import com.app.calculator.Constants.SN_UPPER_BOUND
+import com.app.calculator.Constants.STATE_0
+import com.app.calculator.Constants.STATE_1
+import com.app.calculator.Constants.STATE_2
+import com.app.calculator.Constants.STATE_3
+import com.app.calculator.Constants.STATE_4
+import com.app.calculator.Constants.STATE_5
+import com.app.calculator.Constants.STATE_6
+import com.app.calculator.Constants.STATE_7
+import com.app.calculator.Constants.STATE_8
 
 class SimpleCalculatorActivity : AppCompatActivity() {
 
@@ -64,31 +73,40 @@ class SimpleCalculatorActivity : AppCompatActivity() {
         subtractButton = findViewById(R.id.calculator_subtract_button)
         multiplyButton = findViewById(R.id.calculator_multiply_button)
         divideButton = findViewById(R.id.calculator_divide_button)
-
-        savedInstanceState?.getCharSequence("first")?.let { first.append(it) }
-        savedInstanceState?.getCharSequence("second")?.let { second.append(it) }
-        savedInstanceState?.getSerializable("displayMode", DisplayMode::class.java)?.let { displayMode = it }
-        savedInstanceState?.getSerializable("operationIntent", OperationMode::class.java)?.let { operationIntent = it }
-        savedInstanceState?.getSerializable("operationLocked", OperationMode::class.java)?.let { operationLocked = it }
-        savedInstanceState?.getBoolean("manipulated")?.let { manipulated = it }
-        savedInstanceState?.getBoolean("calculated")?.let { calculated = it }
-        savedInstanceState?.getBoolean("block")?.let { block = it }
-        savedInstanceState?.getBoolean("error")?.let { error = it }
-
-        drawUI()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putCharSequence("first", first)
-        outState.putCharSequence("second", second)
-        outState.putSerializable("displayMode", displayMode)
-        outState.putSerializable("operationIntent", operationIntent)
-        outState.putSerializable("operationLocked", operationLocked)
-        outState.putBoolean("manipulated", manipulated)
-        outState.putBoolean("calculated", calculated)
-        outState.putBoolean("block", block)
-        outState.putBoolean("error", error)
+
+        outState.run {
+            putCharSequence(STATE_0, first)
+            putCharSequence(STATE_1, second)
+            putSerializable(STATE_2, displayMode)
+            putSerializable(STATE_3, operationIntent)
+            putSerializable(STATE_4, operationLocked)
+            putBoolean(STATE_5, manipulated)
+            putBoolean(STATE_6, calculated)
+            putBoolean(STATE_7, block)
+            putBoolean(STATE_8, error)
+        }
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        savedInstanceState.run {
+            getCharSequence(STATE_0).let { first.append(it) }
+            getCharSequence(STATE_1).let { second.append(it) }
+            getSerializable(STATE_2, DisplayMode::class.java)?.let { displayMode = it }
+            getSerializable(STATE_3, OperationMode::class.java)?.let { operationIntent = it }
+            getSerializable(STATE_4, OperationMode::class.java)?.let { operationLocked = it }
+            getBoolean(STATE_5).let { manipulated = it }
+            getBoolean(STATE_6).let { calculated = it }
+            getBoolean(STATE_7).let { block = it }
+            getBoolean(STATE_8).let { error = it }
+        }
+
+        drawUI()
     }
 
     private fun bindListeners() {
